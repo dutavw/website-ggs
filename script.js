@@ -131,27 +131,27 @@ function validateEmail(email) {
 }
 
 // Lazy Loading for Images
-document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('img[src]');
+// document.addEventListener('DOMContentLoaded', () => {
+//     const images = document.querySelectorAll('img[src]');
     
-    const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.style.opacity = '0';
-                img.style.transition = 'opacity 0.3s ease';
+//     const imageObserver = new IntersectionObserver((entries) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 const img = entry.target;
+//                 img.style.opacity = '0';
+//                 img.style.transition = 'opacity 0.3s ease';
                 
-                img.onload = () => {
-                    img.style.opacity = '1';
-                };
+//                 img.onload = () => {
+//                     img.style.opacity = '1';
+//                 };
                 
-                imageObserver.unobserve(img);
-            }
-        });
-    });
+//                 imageObserver.unobserve(img);
+//             }
+//         });
+//     });
     
-    images.forEach(img => imageObserver.observe(img));
-});
+//     images.forEach(img => imageObserver.observe(img));
+// });
 
 // Scroll to Top Functionality
 function createScrollToTopButton() {
